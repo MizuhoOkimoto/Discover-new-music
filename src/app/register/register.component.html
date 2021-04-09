@@ -1,0 +1,72 @@
+<mat-card>
+  <mat-card-content>
+    <!-- added -->
+    <form
+      id="register-form"
+      #registerForm="ngForm"
+      (ngSubmit)="onSubmit(registerForm)"
+    >
+      <h2>Register</h2>
+      <!-- don't forget *ngIf -->
+      <mat-error *ngIf="warning"> {{ this.warning }}</mat-error
+      ><br />
+      <mat-form-field class="full-width-input">
+        <input
+          matInput
+          placeholder="User Name"
+          name="username"
+          required
+          autofocus
+          [(ngModel)]="registerUser.userName"
+        />
+        <mat-error *ngIf="warning"
+          >Please provide a valid user name</mat-error
+        > </mat-form-field
+      ><br />
+      <mat-form-field class="full-width-input">
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          name="password"
+          required
+          [(ngModel)]="registerUser.password"
+        />
+        <mat-error *ngIf="warning"
+          >Please provide a valid password</mat-error
+        > </mat-form-field
+      ><br />
+      <mat-form-field class="full-width-input">
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          name="password2"
+          required
+          [(ngModel)]="registerUser.password2"
+        />
+        <mat-error *ngIf="warning"
+          >Please provide a valid password</mat-error
+        > </mat-form-field
+      ><br />
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="loading"
+        [disabled]="!registerForm.valid"
+      >
+        <mat-icon>account_box</mat-icon>
+        <span>&nbsp;&nbsp;&nbsp;Register</span>
+      </button>
+    </form>
+  </mat-card-content>
+  <div class="success" *ngIf="success">
+    Registration Successful. Proceed to<br /><br />
+    <a mat-raised-button color="accent" routerLink="/login">
+      <mat-icon>login</mat-icon>&nbsp;&nbsp;&nbsp;Login
+    </a>
+  </div>
+  <div class="loading" *ngIf="loading">Processing Request<br /><br /></div>
+</mat-card>

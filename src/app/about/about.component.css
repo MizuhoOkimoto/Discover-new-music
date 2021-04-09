@@ -9,3 +9,29 @@
 .aboutpage2 {
   margin-left: 50px;
 }
+
+button {
+  color: white;
+  /* background-color: rgb(130, 164, 238); */
+  background-color: rgb(47, 45, 182);
+}
+
+.about {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.title {
+  font-size: x-large;
+  font-weight: 500;
+}
+p {
+  font-size: large;
+}
+img {
+  box-shadow: 5px 5px 2px rgba(139, 138, 138, 0.705);
+}
+.project p {
+  font-weight: 700;
+}
