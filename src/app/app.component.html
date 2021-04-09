@@ -2,11 +2,9 @@
   <!-- Top navbar -->
   <mat-toolbar class="navbar" color="primary">
     <!-- only if token exist-->
-    <div *ngIf="token">
-      <button mat-icon-button (click)="snav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
+    <button mat-icon-button (click)="snav.toggle()" *ngIf="token">
+      <mat-icon>menu</mat-icon>
+    </button>
 
     <a class="navbar-brand" matTooltip="Home">
       <h1>Seneca Music</h1>
@@ -15,12 +13,10 @@
     <span class="navbar-spacer"></span>
 
     <!-- only if token exist-->
-    <div *ngIf="token">
-      <button mat-button [matMenuTriggerFor]="userMenu">
-        <mat-icon>person</mat-icon>
-        <span fxShow fxHide.xs> {{ token.userName }} </span>
-      </button>
-    </div>
+    <button mat-button [matMenuTriggerFor]="userMenu" *ngIf="token">
+      <mat-icon>person</mat-icon>
+      <span fxShow fxHide.xs> {{ token.userName }} </span>
+    </button>
     <mat-menu
       #userMenu="matMenu"
       xPosition="before"
