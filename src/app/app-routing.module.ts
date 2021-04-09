@@ -42,7 +42,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'notFound', component: NotFoundComponent },
-  { path: '', component: NewReleasesComponent },
+  { path: '', component: LoginComponent }, //changed
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '/404' },
 ];
