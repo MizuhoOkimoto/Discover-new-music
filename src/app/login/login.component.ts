@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
         (success) => {
           this.loading = false;
           localStorage.setItem('access_token', success.token); // store the returned token in local storage as 'access_token'
-          // redirect to the "vehicles" route
           this.router.navigate(['/newReleases']);
         },
         (err) => {
@@ -35,13 +34,13 @@ export class LoginComponent implements OnInit {
       );
     }
     //for checking
-    console.log('submit', {
-      value: form.value,
-      valid: form.valid,
-      dirty: form.dirty,
-      touched: form.touched,
-      userName: this.user.userName,
-      password: this.user.password,
-    });
+    // console.log('submit', {
+    //   value: form.value,
+    //   valid: form.valid,
+    //   dirty: form.dirty,
+    //   touched: form.touched,
+    //   userName: this.user.userName,
+    //   password: this.user.password,
+    // });
   }
 }

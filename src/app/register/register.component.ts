@@ -19,10 +19,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(form: NgForm): void {
-    // if (
-    //   this.registerUser.userName !== '' || //how about null?
-    //   this.registerUser.password === this.registerUser.password2
-    // ) {
     if (
       this.registerUser.userName &&
       this.registerUser.password &&
@@ -47,14 +43,14 @@ export class RegisterComponent implements OnInit {
       }
     }
     //for checking
-    console.log('submit', {
-      value: form.value,
-      valid: form.valid,
-      dirty: form.dirty,
-      touched: form.touched,
-      userName: this.registerUser.userName,
-      password: this.registerUser.password,
-      password2: this.registerUser.password2,
-    });
+    // console.log('submit', {
+    //   value: form.value,
+    //   valid: form.valid,
+    //   dirty: form.dirty,
+    //   touched: form.touched,
+    //   userName: this.registerUser.userName,
+    //   password: this.registerUser.password,
+    //   password2: this.registerUser.password2,
+    // });
   }
 }
