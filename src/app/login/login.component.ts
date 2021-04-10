@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
         },
         (err) => {
           this.warning = err.error.message; //login info doesn't match?
+          //console.log(err.error.message);
           this.loading = false;
         }
       );
