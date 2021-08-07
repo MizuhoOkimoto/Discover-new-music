@@ -1,14 +1,3 @@
-/*********************************************************************************
- *  WEB422 – Assignment 06
- *  I declare that this assignment is my own work in accordance with Seneca  Academic Policy.
- *  No part of this assignment has been copied manually or electronically from any other
- *  source (including web sites) or distributed to other students.
- *
- *  Name: Mizuho Okimoto Student ID: 168211183 Date: 2021/04/09
- *  Online Link: https://discover-new-music.vercel.app
- *
- ********************************************************************************/
-
 import { Component, OnInit } from '@angular/core';
 import { NavigationStart, Router, Event } from '@angular/router';
 import { AuthService } from './auth.service';
@@ -19,7 +8,7 @@ import { AuthService } from './auth.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'web422-a4';
+  title = 'Angular - Music Discography';
   searchString: String;
   token: any; //added token property
 
