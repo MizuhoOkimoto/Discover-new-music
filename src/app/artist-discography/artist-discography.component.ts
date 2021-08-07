@@ -29,7 +29,7 @@ export class ArtistDiscographyComponent implements OnInit, OnDestroy {
             index === self.findIndex((c) => c.name === album.name)
         );
       });
-    }); //need to change...??
+    }); //double check
   }
   ngOnDestroy() {
     this.sub.unsubscribe();
